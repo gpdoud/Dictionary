@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Dictionary {
 	class Program {
-		static void Main(string[] args) {
+
+		void Run() {
+			Dictionary<string, string> StateCodes = new Dictionary<string, string>();
+			StateCodes["OH"] = "Ohio";
+			StateCodes["KY"] = "Kentucky";
+			StateCodes["IN"] = "Indiana";
+
+			foreach (var key in StateCodes.Keys) {
+				Console.WriteLine($"The state name for code {key} is {StateCodes[key]}");
+			}
+		}
+
+			static void Main(string[] args) {
+			new Program().Run();
 		}
 	}
 }
